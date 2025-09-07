@@ -5,6 +5,6 @@ const { home, registration , Login } = require("../controllers/authControllers")
 
 routes.get("/" , home);
 routes.post("/registration" , registration);
-routes.get("/login" , Login);
+routes.post("/login" , Login);
 
 module.exports = routes ;

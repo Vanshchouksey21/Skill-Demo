@@ -45,6 +45,7 @@ const home = async(req , res)=>{
     });
 
     res.status(201).json({
+      "success": true,
       message: "user created successfully",
       details: UserCreated,
       token : await UserCreated.generateToken(),
@@ -77,6 +78,7 @@ const home = async(req , res)=>{
           })
         }
          res.status(201).json({
+          "success": true,
       message: "user Logined successfully",
       details: validUser,
       token : await validUser.generateToken(),
