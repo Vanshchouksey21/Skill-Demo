@@ -96,8 +96,26 @@ const home = async(req , res)=>{
 
     }
 
+    const Userr = async(req , res) =>{
+      try {
+        const userData = req.user ;
+        console.log(userData);
+       return res.status(200).json({
+          user :userData
+        })
+        
+        
+      } catch (error) {
+        console.error(`error from userController ${error}`);
+        
+      }
+
+
+    }
+
 module.exports= {
     home,
     registration,
-    Login
+    Login,
+    Userr
 }
